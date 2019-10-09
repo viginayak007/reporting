@@ -15,7 +15,7 @@ server.use(bodyParser.raw({limit: '10mb', extended: false}));
 
 server.use(cors());
 // Add headers
-app.use(function (req, res, next) {
+server.use(function (req, res, next) {
 
     // Website you wish to allow to connect
     res.setHeader('Access-Control-Allow-Origin', '*');
