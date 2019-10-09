@@ -23,16 +23,12 @@ app.controller('jc', function($scope, $http) {
         var req = {
             method: 'POST',
             url: '/jsontocsv',
-            // headers: {
-            //   'Content-Type': undefined
-            // },
             data: { 
                 fields: JSON.stringify($scope.fields),
                 data : JSON.stringify($scope.data),
                 
             }
            }
-            
            $http(req).then(function(response){
             var anchor = angular.element('<a/>');
             anchor.attr({
@@ -40,11 +36,8 @@ app.controller('jc', function($scope, $http) {
                 target: '_blank',
                 download: 'filename.csv'
             })[0].click();
-            // saveAs(blob, 'File_Name_With_Some_Unique_Id_Time' + '.csv');
-
-            console.log(response);
            }, function(response){
-            console.log(response);
+                alert(`Error $(response)`);
            });
     } 
     

@@ -4,8 +4,7 @@
   "description": "reporting server",
   "main": "server.js",
   "scripts": {
-    "test": "npm server.js",
-    "start": "nodemon server.js"
+    "test": "npm server.js"
   },
   "keywords": [
     "reporting"
