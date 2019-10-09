@@ -42,6 +42,14 @@ server.get('/', (req, res) => {
 });
 
 // rest api to handle data requests
+server.post('/ping', (req, res) => {
+   
+    res.send('ping'); 
+   
+    
+});
+
+// rest api to handle data requests
 server.post('/jsontocsv', (req, res) => {
 
     const fields = JSON.parse(req.body.fields);
